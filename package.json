@@ -1,0 +1,28 @@
+{
+  "name": "arts-po-rev",
+  "version": "1.0.0",
+  "description": "<a href='./LICENSE'>![License](https://img.shields.io/badge/License%3A-MIT-green.svg)</a>",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aken00/arts-po-rev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aken00/arts-po-rev/issues"
+  },
+  "homepage": "https://github.com/Aken00/arts-po-rev#readme",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
